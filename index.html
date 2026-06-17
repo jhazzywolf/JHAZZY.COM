@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jhazzy Wolf | Official Site</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 
@@ -14,11 +14,11 @@
             <h2>JHAZZY WOLF</h2>
         </div>
         <nav class="main-nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="music.html">Music</a>
-            <a href="about.html">About</a>
-            <a href="press.html">Press</a>
-            <a href="book.html">Book Me</a>
+            <a href="index.html" class="active">HOME</a>
+            <a href="music.html">MUSIC</a>
+            <a href="about.html">ABOUT</a>
+            <a href="press.html">PRESS</a>
+            <a href="book.html">BOOK ME</a>
         </nav>
     </header>
 
@@ -27,35 +27,35 @@
         <div class="hero-content">
             <h1 class="hero-title">JHAZZY WOLF</h1>
             <p class="hero-subtitle">INDEPENDENT ARTIST • DENVER, CO</p>
-            <div style="margin-top: 40px;">
-                <a href="music.html" class="cta-button">STREAM CATALOG</a>
-            </div>
+            <a href="music.html" class="stream-cta">STREAM CATALOG</a>
         </div>
     </main>
 
-    <div class="ticker-wrap">
-        <div class="ticker">
-            <div class="ticker-item">NEW SINGLE 'NAUGHTY' OUT NOW</div>
-            <div class="ticker-item">///</div>
-            <div class="ticker-item">"BRINGING FEMININE ENERGY TO THE GAME" - WESTWORD</div>
-            <div class="ticker-item">///</div>
-            <div class="ticker-item">STREAM ON ALL PLATFORMS</div>
-            <div class="ticker-item">///</div>
+    <section class="home-nav-tabs">
+        <a href="music.html" class="nav-tab"><h3>MUSIC</h3><p>Catalog & Visuals</p></a>
+        <a href="about.html" class="nav-tab"><h3>ABOUT</h3><p>The story</p></a>
+        <a href="press.html" class="nav-tab"><h3>PRESS</h3><p>Media Archive</p></a>
+        <a href="book.html" class="nav-tab"><h3>BOOK ME</h3><p>Inquiries</p></a>
+    </section>
+
+    <div id="pet-wolf-container">
+        <div id="wolf-speech-bubble">
+            <div class="bubble-tail"></div>
+            <p id="wolf-dialogue">What's good? I can help you find music or booking info.</p>
+            <div class="wolf-actions">
+                <button class="action-chip" data-action="music">🎵 Play Music</button>
+                <button class="action-chip" data-action="trick">🐺 Do a Trick</button>
+            </div>
+        </div>
+        <div id="wolf-companion">
+            <svg class="wolf-vector" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,10 80,40 90,80 50,95 10,80 20,40" fill="#111" stroke="#fff" stroke-width="2"/>
+                <circle cx="35" cy="50" r="3" fill="#fff" />
+                <circle cx="65" cy="50" r="3" fill="#fff" />
+            </svg>
         </div>
     </div>
 
-    <section class="home-intro">
-        <div class="intro-grid">
-            <div class="intro-image">PORTRAIT HERE</div>
-            <div class="intro-text">
-                <h2 class="section-title" style="text-align: left; border: none; padding-bottom: 0;">THE ENERGY</h2>
-                <p>Born and raised in Denver, Colorado, Jhazzy Wolf is a multi-genre artist cutting through the industry with raw anthems and undeniable presence. Preaching individuality, strength, and self-love, she brings a much-needed feminine energy to the game.</p>
-                <a href="about.html" class="cta-button" style="padding: 10px 25px; font-size: 0.85rem; margin-top: 20px;">READ FULL BIO</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="wolf-teaser-section">
-        <div class="wolf-teaser-box">
-            <h3 style="font-size: 1.5rem; margin-bottom: 10px; color: #fff;">AWAKEN THE WOLF</h3>
-            <p style="color: #8
+    <script src="app.js"></script>
+</body>
+</html>
