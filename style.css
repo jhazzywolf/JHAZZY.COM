@@ -152,3 +152,32 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
 /* Visuals Grid for YouTube */
 .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
 .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background-color: #111; border
+                /* =========================================
+   TEXT PAGES (ABOUT, PRESS, BOOK)
+   ========================================= */
+.text-page-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 5% 80px;
+}
+.text-content-box {
+    background: #111;
+    border: 1px solid #222;
+    padding: 40px;
+    border-radius: 8px;
+}
+.text-content-box p {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+.press-card {
+    background: #111;
+    border: 1px solid #222;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.press-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.press-card p { font-style: italic; color: #aaa; margin-bottom: 20px; line-height: 1.6; }
