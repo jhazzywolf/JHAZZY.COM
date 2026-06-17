@@ -22,7 +22,7 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
 .ticker-item { flex-shrink: 0; width: 33.33%; text-align: center; font-family: 'Syne', sans-serif; font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; }
 @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
 
-/* Latest Release Spotlight */
+/* Latest Release Spotlight & Shared Layouts */
 .latest-release { padding: 80px 5%; display: flex; justify-content: center; }
 .release-content { width: 100%; max-width: 800px; text-align: center; }
 .section-title { font-size: 2rem; margin-bottom: 40px; }
@@ -30,26 +30,21 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
 .release-art { width: 250px; height: 250px; background: #222; display: flex; align-items: center; justify-content: center; color: #555; }
 .release-details h3 { font-size: 2.5rem; margin-bottom: 10px; }
 .release-details p { color: #888; margin-bottom: 25px; }
-.cta-button { border: 1px solid #fff; padding: 15px 40px; font-family: 'Syne', sans-serif; font-weight: 700; letter-spacing: 2px; display: inline-block; background: transparent; cursor: pointer; }
+.cta-button { border: 1px solid #fff; padding: 15px 40px; font-family: 'Syne', sans-serif; font-weight: 700; letter-spacing: 2px; display: inline-block; background: transparent; cursor: pointer; text-align: center; }
 .cta-button:hover { background: #fff; color: #000; }
+.page-header { padding: 60px 5%; text-align: center; }
 
-/* Clean Catalog List */
-.page-header { padding: 60px 5%; text-align: center; border-bottom: none; }
-.catalog-list { max-width: 900px; margin: 0 auto; padding: 0 5% 60px; display: flex; flex-direction: column; gap: 30px; }
-.music-release-card { display: flex; gap: 30px; background: #0a0a0a; border: 1px solid #222; padding: 25px; border-radius: 8px; align-items: center; }
-.cover-art { width: 180px; height: 180px; background: #1a1a1a; display: flex; align-items: center; justify-content: center; color: #555; flex-shrink: 0; }
-.release-info { flex: 1; }
-.release-info h3 { font-size: 1.8rem; margin-bottom: 15px; }
-.release-year { color: #666; font-size: 1rem; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0; }
-.platform-links { display: flex; gap: 10px; flex-wrap: wrap; }
-.platform-btn { padding: 10px 20px; border: 1px solid #444; border-radius: 30px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; }
+/* Original Music Grid Restored & Improved */
+.music-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 5% 60px; max-width: 1200px; margin: 0 auto; }
+.track-card { background: #111; padding: 25px; border-radius: 8px; text-align: center; border: 1px solid #222; }
+.placeholder-art { width: 100%; height: 280px; background: #222; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #555; }
+.track-info h3 { font-size: 1.4rem; margin-bottom: 5px; }
+.track-info p { color: #888; margin-bottom: 20px; font-size: 0.9rem; }
+
+/* New Platform Link Buttons */
+.platform-links { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.platform-btn { padding: 8px 16px; border: 1px solid #444; border-radius: 30px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; }
 .platform-btn:hover { background: #fff; color: #000; border-color: #fff; }
-
-/* Responsive adjustments for the music list */
-@media (max-width: 650px) {
-    .music-release-card { flex-direction: column; text-align: center; }
-    .platform-links { justify-content: center; }
-}
 
 /* Visuals Grid (YouTube Embeds) */
 .visuals-section { padding: 0 5% 60px; max-width: 1200px; margin: 0 auto; }
@@ -57,8 +52,8 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
 .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background-color: #111; border-radius: 4px; }
 .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-/* About Section */
-.about-container { display: flex; flex-wrap: wrap; padding: 60px 5%; gap: 50px; }
+/* About / Book Section */
+.about-container { display: flex; flex-wrap: wrap; padding: 60px 5%; gap: 50px; max-width: 1200px; margin: 0 auto; }
 .about-image { flex: 1; min-width: 300px; }
 .placeholder-portrait { width: 100%; height: 500px; background: #222; display: flex; align-items: center; justify-content: center; color: #555; }
 .about-content { flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center; }
@@ -66,21 +61,31 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
 .contact-info h3 { font-size: 1rem; color: #888; margin-bottom: 10px; }
 .email-link { font-size: 1.2rem; text-decoration: underline; }
 
-/* Interactive Wolf Companion */
-#wolf-companion { position: fixed; bottom: 40px; right: 40px; width: 70px; height: 70px; cursor: pointer; z-index: 9999; transition: transform 0.2s ease; }
+/* The Pet Wolf Container */
+#pet-wolf-container { position: fixed; bottom: 40px; right: 40px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; }
+#wolf-companion { width: 70px; height: 70px; cursor: pointer; transition: transform 0.2s ease; filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.5)); }
 #wolf-companion:hover { transform: scale(1.1); }
-.wolf-vector { width: 100%; height: 100%; filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.5)); }
+.wolf-vector { width: 100%; height: 100%; }
 
-/* Wolf Chat UI */
-#wolf-chat-ui { position: fixed; bottom: 130px; right: 40px; width: 320px; background-color: #0a0a0a; border: 1px solid #333; border-radius: 8px; display: flex; flex-direction: column; opacity: 0; pointer-events: none; transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(10px); z-index: 9998; box-shadow: 0px 10px 30px rgba(0,0,0,0.8); }
-#wolf-chat-ui.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
-.chat-header { padding: 15px 20px; border-bottom: 1px solid #222; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 1px; background: #111; border-radius: 8px 8px 0 0; }
-.chat-body { padding: 20px; height: 250px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; }
-.chat-msg { padding: 10px 15px; border-radius: 6px; font-size: 0.85rem; line-height: 1.4; max-width: 85%; }
-.wolf-msg { background: #222; align-self: flex-start; color: #eee; border-top-left-radius: 0; }
-.user-msg { background: #fff; color: #000; align-self: flex-end; border-top-right-radius: 0; }
-.chat-footer { padding: 15px; border-top: 1px solid #222; display: flex; gap: 10px; }
-#chat-input { flex: 1; background: #111; border: 1px solid #333; color: #fff; padding: 10px; font-family: 'Inter', sans-serif; font-size: 0.85rem; outline: none; }
-#chat-input:focus { border-color: #666; }
-#chat-send { background: #fff; color: #000; border: none; padding: 0 15px; font-family: 'Syne', sans-serif; font-weight: 700; cursor: pointer; transition: background 0.2s; }
-#chat-send:hover { background: #ccc; }
+/* Animation Classes triggered by JS */
+.wolf-jump { animation: jump 0.5s ease; }
+.wolf-spin { animation: spin 0.6s ease; }
+@keyframes jump { 0% { transform: translateY(0); } 50% { transform: translateY(-40px); } 100% { transform: translateY(0); } }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* The Speech Bubble */
+#wolf-speech-bubble { background: #fff; color: #000; padding: 20px; border-radius: 20px 20px 0 20px; width: 280px; margin-bottom: 15px; position: relative; opacity: 0; pointer-events: none; transform: translateY(10px) scale(0.95); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 10px 25px rgba(0,0,0,0.5); transform-origin: bottom right; }
+#wolf-speech-bubble.visible { opacity: 1; pointer-events: auto; transform: translateY(0) scale(1); }
+.bubble-tail { position: absolute; bottom: -10px; right: 20px; width: 0; height: 0; border-left: 15px solid transparent; border-top: 15px solid #fff; border-right: 0px solid transparent; }
+#wolf-dialogue { font-size: 0.95rem; line-height: 1.4; margin-bottom: 15px; font-weight: 500; }
+
+/* Game-Style Action Chips */
+.wolf-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+.action-chip { background: #eee; border: 1px solid #ddd; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-family: 'Syne', sans-serif; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+.action-chip:hover { background: #000; color: #fff; border-color: #000; }
+
+/* The Input Area inside the bubble */
+.wolf-input-area { display: flex; border-top: 1px solid #eee; padding-top: 15px; }
+#wolf-talk-input { flex: 1; border: none; outline: none; font-family: 'Inter', sans-serif; font-size: 0.85rem; padding: 5px; }
+#wolf-talk-send { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #aaa; transition: color 0.2s; }
+#wolf-talk-send:hover { color: #000; }
