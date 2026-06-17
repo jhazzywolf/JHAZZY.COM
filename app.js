@@ -1,79 +1,73 @@
 document.addEventListener('DOMContentLoaded', () => {
     const wolf = document.getElementById('wolf-companion');
-    const chatUI = document.getElementById('wolf-chat-ui');
-    const chatBody = document.getElementById('chat-body');
-    const chatInput = document.getElementById('chat-input');
-    const sendBtn = document.getElementById('chat-send');
+    const bubble = document.getElementById('wolf-speech-bubble');
+    const dialogueText = document.getElementById('wolf-dialogue');
+    const talkInput = document.getElementById('wolf-talk-input');
+    const sendBtn = document.getElementById('wolf-talk-send');
+    const actionChips = document.querySelectorAll('.action-chip');
 
-    // Toggle Chat Window
-    if (wolf && chatUI) {
+    // Clicking the Wolf makes it jump and opens the bubble
+    if (wolf && bubble) {
         wolf.addEventListener('click', () => {
-            chatUI.classList.toggle('visible');
+            wolf.classList.add('wolf-jump');
+            setTimeout(() => { wolf.classList.remove('wolf-jump'); }, 500);
+            bubble.classList.toggle('visible');
+            if (bubble.classList.contains('visible')) {
+                dialogueText.innerHTML = "What's good? Give me a command or ask me a question.";
+            }
         });
     }
 
-    // The Wolf's "Brain" (Keyword Dictionary)
-    function getWolfResponse(input) {
-        const text = input.toLowerCase();
-        
-        if (text.includes('music') || text.includes('song') || text.includes('naughty') || text.includes('listen')) {
-            return "You can stream my latest drop 'Naughty' right here on the homepage, or check out my full catalog on the <a href='music.html' style='color:#888; text-decoration:underline;'>Music page</a>. 🎵";
-        }
-        if (text.includes('book') || text.includes('perform') || text.includes('event') || text.includes('host') || text.includes('wednesday')) {
-            return "Looking to collaborate or book a performance? Head over to the <a href='book.html' style='color:#888; text-decoration:underline;'>Book Me</a> tab to send the details. 📆";
-        }
-        if (text.includes('press') || text.includes('article') || text.includes('interview')) {
-            return "Check out the <a href='press.html' style='color:#888; text-decoration:underline;'>Press page</a> to see what Westword and Denverite are saying. 📰";
-        }
-        if (text.includes('who') || text.includes('about') || text.includes('bio') || text.includes('jhazzy')) {
-            return "I'm an independent artist born and raised in Denver, bringing feminine energy to the game. Read the full story on the <a href='about.html' style='color:#888; text-decoration:underline;'>About page</a>. 🐺";
-        }
-        if (text.includes('hello') || text.includes('hi') || text.includes('hey') || text.includes('sup')) {
-            return "What's good? I can help you find music, booking info, or press articles. What do you need?";
-        }
-        
-        // Fallback response if no keywords match
-        return "I only speak music and business. Try asking me about Jhazzy's latest tracks, booking info, or press!";
-    }
-
-    // Handle sending messages
-    function sendMessage() {
-        const userText = chatInput.value.trim();
-        if (userText === '') return;
-
-        // Add user message to UI
-        const userDiv = document.createElement('div');
-        userDiv.className = 'chat-msg user-msg';
-        userDiv.textContent = userText;
-        chatBody.appendChild(userDiv);
-
-        // Clear input
-        chatInput.value = '';
-
-        // Auto-scroll to bottom
-        chatBody.scrollTop = chatBody.scrollHeight;
-
-        // Simulate thinking delay before Wolf replies
-        setTimeout(() => {
-            const wolfDiv = document.createElement('div');
-            wolfDiv.className = 'chat-msg wolf-msg';
-            wolfDiv.innerHTML = getWolfResponse(userText);
-            chatBody.appendChild(wolfDiv);
-            chatBody.scrollTop = chatBody.scrollHeight;
-        }, 600);
-    }
-
-    // Send on button click
-    if (sendBtn) {
-        sendBtn.addEventListener('click', sendMessage);
-    }
-
-    // Send on 'Enter' key
-    if (chatInput) {
-        chatInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                sendMessage();
+    // Quick Game Buttons (Action Chips)
+    actionChips.forEach(chip => {
+        chip.addEventListener('click', (e) => {
+            const action = e.target.getAttribute('data-action');
+            if (action === 'music') {
+                dialogueText.innerHTML = "Go check out the <a href='music.html' style='color:blue; text-decoration:underline;'>Music tab</a> for my latest single 'Naughty'.";
+            } else if (action === 'trick') {
+                dialogueText.innerHTML = "Watch this! 🐺🔄";
+                wolf.classList.add('wolf-spin');
+                setTimeout(() => { wolf.classList.remove('wolf-spin'); }, 600);
+            } else if (action === 'about') {
+                dialogueText.innerHTML = "I'm a multi-genre artist out of Denver bringing the heat. Catch the whole story on the <a href='about.html' style='color:blue; text-decoration:underline;'>About page</a>.";
             }
+        });
+    });
+
+    // Talking/Typing to the Wolf
+    function processWolfConversation(input) {
+        const text = input.toLowerCase();
+        if (text.includes('music') || text.includes('song') || text.includes('naughty')) {
+            return "Streaming 'Naughty' everywhere right now. Check the <a href='music.html' style='color:blue; text-decoration:underline;'>Music page</a>.";
+        }
+        if (text.includes('book') || text.includes('event')) {
+            return "Ready to lock it in? Hit the <a href='book.html' style='color:blue; text-decoration:underline;'>Book Me</a> tab.";
+        }
+        if (text.includes('hello') || text.includes('hi') || text.includes('hey')) {
+            return "Yo! Welcome to the pack. Need directions around the site?";
+        }
+        if (text.includes('good boy') || text.includes('pet')) {
+            wolf.classList.add('wolf-jump');
+            setTimeout(() => { wolf.classList.remove('wolf-jump'); }, 500);
+            return "*Happy wolf noises* 🐺";
+        }
+        return "I only speak music, business, and raw energy. Try asking me about my latest drop!";
+    }
+
+    function handleChatSubmit() {
+        const userText = talkInput.value.trim();
+        if (userText === '') return;
+        dialogueText.innerHTML = "<em>...</em>";
+        talkInput.value = '';
+        setTimeout(() => {
+            dialogueText.innerHTML = processWolfConversation(userText);
+        }, 400);
+    }
+
+    if (sendBtn) sendBtn.addEventListener('click', handleChatSubmit);
+    if (talkInput) {
+        talkInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleChatSubmit();
         });
     }
 });
