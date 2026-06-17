@@ -19,7 +19,6 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
    THE PET WOLF (STRICT POSITIONING)
    ========================================= */
 
-/* This container pins everything to the bottom right corner of the screen */
 #pet-wolf-container { 
     position: fixed; 
     bottom: 30px; 
@@ -30,7 +29,6 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
     align-items: flex-end; 
 }
 
-/* The Wolf Graphic */
 #wolf-companion { 
     width: 60px; 
     height: 60px; 
@@ -39,7 +37,6 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
 }
 #wolf-companion:hover { transform: scale(1.1); }
 
-/* The Speech Bubble - Locked down and invisible */
 #wolf-speech-bubble { 
     background: #111; 
     border: 1px solid #333; 
@@ -48,37 +45,32 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
     border-radius: 12px 12px 0 12px; 
     width: 300px; 
     margin-bottom: 15px; 
-    
-    /* These rules make it impossible to see or click until JavaScript adds the 'visible' class */
     opacity: 0; 
     pointer-events: none; 
     transform: translateY(20px); 
     transition: all 0.3s ease; 
 }
 
-/* This class is added when the Wolf is clicked */
 #wolf-speech-bubble.visible { 
     opacity: 1; 
     pointer-events: auto; 
     transform: translateY(0); 
 }
 
-/* Bubble Styling Details */
 .bubble-tail { position: absolute; bottom: -10px; right: 20px; width: 0; height: 0; border-left: 15px solid transparent; border-top: 15px solid #111; border-right: 0px solid transparent; }
 #wolf-dialogue { font-size: 0.95rem; line-height: 1.4; margin-bottom: 15px; font-weight: 500; }
 .wolf-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
 .action-chip { background: #222; color: #fff; border: 1px solid #444; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-family: 'Syne', sans-serif; font-weight: 700; cursor: pointer; }
 .action-chip:hover { background: #fff; color: #000; border-color: #fff; }
 
-/* Input Area */
 .wolf-input-area { display: flex; border-top: 1px solid #333; padding-top: 15px; }
 #wolf-talk-input { flex: 1; background: transparent; border: none; outline: none; font-family: 'Inter', sans-serif; font-size: 0.85rem; color: #fff; padding: 5px; }
 #wolf-talk-send { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #888; }
 #wolf-talk-send:hover { color: #fff; }
 
-/* Animations */
 .wolf-jump { animation: jump 0.5s ease; }
 @keyframes jump { 0% { transform: translateY(0); } 50% { transform: translateY(-30px); } 100% { transform: translateY(0); } }
+
 /* =========================================
    THE SQUARE MUSIC GRID
    ========================================= */
@@ -87,14 +79,12 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
 .catalog-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 5% 80px; }
 .category-title { font-size: 1.5rem; margin-bottom: 25px; border-bottom: 1px solid #222; padding-bottom: 10px; }
 
-/* The Grid Layout */
 .square-grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
     gap: 30px; 
 }
 
-/* The Perfect Square Container */
 .square-card { 
     aspect-ratio: 1 / 1; 
     position: relative; 
@@ -104,7 +94,6 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
     background: #111;
 }
 
-/* The Art Background */
 .square-art-placeholder {
     width: 100%;
     height: 100%;
@@ -117,7 +106,6 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
     letter-spacing: 2px;
 }
 
-/* The Dark Fade Overlay containing the text/buttons */
 .square-overlay {
     position: absolute;
     bottom: 0;
@@ -133,7 +121,6 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
 .track-meta h3 { font-size: 1.3rem; margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
 .track-meta p { color: #aaa; margin-bottom: 15px; font-size: 0.85rem; }
 
-/* Platform Link Buttons */
 .platform-links { display: flex; gap: 8px; flex-wrap: wrap; }
 .platform-btn { 
     padding: 6px 14px; 
@@ -149,10 +136,12 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
 }
 .platform-btn:hover { background: #fff; color: #000; border-color: #fff; }
 
-/* Visuals Grid for YouTube */
+/* Visuals Grid for YouTube (FIXED LINE) */
 .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background-color: #111; border
-                /* =========================================
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background-color: #111; border-radius: 4px; border: 1px solid #222; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* =========================================
    TEXT PAGES (ABOUT, PRESS, BOOK)
    ========================================= */
 .text-page-wrapper {
