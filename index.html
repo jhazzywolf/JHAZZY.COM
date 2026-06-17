@@ -3,49 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhazzy Wolf | Official Site</title>
+    <title>Jhazzy Wolf | About</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
-    <header class="site-header">
+    <header class="site-header" style="position: relative; background: #050505;">
         <div class="logo">
             <h2>JHAZZY WOLF</h2>
         </div>
         <nav class="main-nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="#">Music</a>
-            <a href="#">About</a>
-            <a href="#">Press</a>
-            <a href="#">Book Me</a>
+            <a href="index.html">Home</a>
+            <a href="music.html">Music</a>
+            <a href="about.html" class="active">About</a>
+            <a href="press.html">Press</a>
+            <a href="book.html">Book Me</a>
         </nav>
     </header>
 
-    <main class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">JHAZZY WOLF</h1>
-            <p class="hero-subtitle">INDEPENDENT ARTIST • DENVER, CO</p>
+    <section class="page-header">
+        <h1 class="section-title">THE WOLF</h1>
+    </section>
+
+    <main class="text-page-wrapper">
+        <div class="text-content-box">
+            <p>Born and raised in Denver, Colorado, Jhazzy Wolf is a multi-genre independent artist bringing a much-needed feminine energy to the industry.</p>
+            <p>Preaching individuality, strength, and self-love; it is serendipitous for a woman who calls herself a wolf to be the one cutting through. She builds community and elevates the scene, consistently proving that her artistry is built on authentic connections and undeniable talent.</p>
+            <br>
+            <h3>BOOKING & INQUIRIES</h3>
+            <a href="mailto:contact@jhazzy.com" style="color: #888; text-decoration: underline;">contact@jhazzy.com</a>
         </div>
     </main>
 
     <div id="pet-wolf-container">
-        
         <div id="wolf-speech-bubble">
             <div class="bubble-tail"></div>
             <p id="wolf-dialogue">What's good? Give me a command or ask me a question.</p>
-            
             <div class="wolf-actions">
                 <button class="action-chip" data-action="music">🎵 Play Music</button>
                 <button class="action-chip" data-action="trick">🐺 Do a Trick</button>
             </div>
-            
             <div class="wolf-input-area">
                 <input type="text" id="wolf-talk-input" placeholder="Talk to the wolf...">
                 <button id="wolf-talk-send">❯</button>
             </div>
         </div>
-
         <div id="wolf-companion">
             <svg class="wolf-vector" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <polygon points="50,10 80,40 90,80 50,95 10,80 20,40" fill="#111" stroke="#fff" stroke-width="2"/>
@@ -53,7 +56,6 @@
                 <circle cx="65" cy="50" r="3" fill="#fff" />
             </svg>
         </div>
-
     </div>
 
     <script src="app.js"></script>
