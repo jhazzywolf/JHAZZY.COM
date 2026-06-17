@@ -16,17 +16,44 @@
         <nav class="main-nav">
             <a href="index.html" class="active">Home</a>
             <a href="music.html">Music</a>
-            <a href="about.html">About / Contact</a>
+            <a href="about.html">About</a>
+            <a href="press.html">Press</a>
+            <a href="book.html">Book Me</a>
         </nav>
     </header>
 
     <main class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">INTRODUCING THE ONE & ONLY</h1>
+            <h1 class="hero-title">JHAZZY WOLF</h1>
             <p class="hero-subtitle">INDEPENDENT ARTIST • DENVER, CO</p>
-            <a href="music.html" class="cta-button">LISTEN TO THE LATEST</a>
         </div>
     </main>
+
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker-item">NEW SINGLE 'NAUGHTY' OUT NOW</div>
+            <div class="ticker-item">///</div>
+            <div class="ticker-item">"BRINGING FEMININE ENERGY TO THE GAME" - WESTWORD</div>
+            <div class="ticker-item">///</div>
+            <div class="ticker-item">STREAM ON ALL PLATFORMS</div>
+            <div class="ticker-item">///</div>
+        </div>
+    </div>
+
+    <section class="latest-release">
+        <div class="release-content">
+            <h2 class="section-title">LATEST DROP</h2>
+            <div class="release-card">
+                <div class="release-art">ART HERE</div>
+                <div class="release-details">
+                    <h3>NAUGHTY</h3>
+                    <p>Stream the new single now.</p>
+                    <a href="music.html" class="cta-button">LISTEN NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div id="wolf-companion">
         <svg class="wolf-vector" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -36,15 +63,17 @@
         </svg>
     </div>
 
-    <div id="wolf-stash" class="hidden">
-        <h3>THE WOLF'S STASH</h3>
-        <ul>
-            <li><a href="#">🎵 Unreleased Snippet</a></li>
-            <li><a href="#">🎬 Behind the Beat</a></li>
-        </ul>
+    <div id="wolf-chat-ui" class="hidden">
+        <div class="chat-header">JHAZZY'S WOLF</div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg wolf-msg">Welcome to the pack. What are you looking for?</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Ask about music, booking...">
+            <button id="chat-send">SEND</button>
+        </div>
     </div>
 
-    <audio id="site-audio" src="" crossorigin="anonymous"></audio>
     <script src="app.js"></script>
 </body>
 </html>
