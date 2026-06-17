@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhazzy Wolf | Press</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header" style="position: relative; background: #050505;">
+        <div class="logo">
+            <h2>JHAZZY WOLF</h2>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="music.html">Music</a>
+            <a href="about.html">About</a>
+            <a href="press.html" class="active">Press</a>
+            <a href="book.html">Book Me</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1 class="section-title">THE ARCHIVE</h1>
+    </section>
+
+    <section class="music-grid">
+        <div class="release-card" style="flex-direction: column; align-items: flex-start; gap: 20px;">
+            <h3 style="font-size: 1.5rem; color: #fff;">WESTWORD</h3>
+            <p style="font-style: italic; color: #aaa;">"But artists like Wolf are determined to create community and elevate Denver's hip-hop scene to national acclaim."</p>
+            <a href="#" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">READ ARTICLE</a>
+        </div>
+
+        <div class="release-card" style="flex-direction: column; align-items: flex-start; gap: 20px;">
+            <h3 style="font-size: 1.5rem; color: #fff;">DENVERITE</h3>
+            <p style="font-style: italic; color: #aaa;">"For Wolf, it's a win-win situation for partners and artists alike to see their music community flourish in this capacity."</p>
+            <a href="#" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">READ ARTICLE</a>
+        </div>
+    </section>
+
+    <div id="wolf-companion"><svg class="wolf-vector" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polygon points="50,10 80,40 90,80 50,95 10,80 20,40" fill="#111" stroke="#fff" stroke-width="2"/><circle cx="35" cy="50" r="3" fill="#fff" /><circle cx="65" cy="50" r="3" fill="#fff" /></svg></div>
+    <div id="wolf-chat-ui" class="hidden"><div class="chat-header">JHAZZY'S WOLF</div><div class="chat-body" id="chat-body"></div><div class="chat-footer"><input type="text" id="chat-input"><button id="chat-send">SEND</button></div></div>
+    <script src="app.js"></script>
+</body>
+</html>
