@@ -9,16 +9,14 @@
 </head>
 <body>
 
-    <header class="site-header" style="position: relative; background: #050505;">
+    <header class="site-header">
         <div class="logo">
             <h2>JHAZZY WOLF</h2>
         </div>
         <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="music.html" class="active">Music</a>
-            <a href="about.html">About</a>
-            <a href="press.html">Press</a>
-            <a href="book.html">Book Me</a>
+            <a href="about.html">About / Contact</a>
         </nav>
     </header>
 
@@ -26,44 +24,53 @@
         <h1 class="section-title">THE CATALOG</h1>
     </section>
 
-    <section class="catalog-list">
-        
-        <div class="music-release-card">
-            <div class="cover-art">ART HERE</div>
-            <div class="release-info">
-                <h3>NAUGHTY <span class="release-year">(2023)</span></h3>
-                <div class="platform-links">
-                    <a href="#" class="platform-btn">Spotify</a>
-                    <a href="#" class="platform-btn">Apple Music</a>
-                    <a href="#" class="platform-btn">YouTube</a>
-                    <a href="#" class="platform-btn other" onclick="alert('Search \'Jhazzy Wolf - Naughty\' on your desired platform.'); return false;">Other</a>
-                </div>
+    <section class="music-grid">
+        <div class="track-card">
+            <div class="placeholder-art">ART HERE</div>
+            <div class="track-info">
+                <h3>NAUGHTY</h3>
+                <p>2023</p>
+                <a href="#" class="stream-link">PLAY NOW</a>
             </div>
         </div>
-
-        <div class="music-release-card">
-            <div class="cover-art">ART HERE</div>
-            <div class="release-info">
-                <h3>BEAUTIFUL NIGHTMARE <span class="release-year">(2023)</span></h3>
-                <div class="platform-links">
-                    <a href="#" class="platform-btn">Spotify</a>
-                    <a href="#" class="platform-btn">Apple Music</a>
-                    <a href="#" class="platform-btn">YouTube</a>
-                    <a href="#" class="platform-btn other" onclick="alert('Search \'Jhazzy Wolf - Beautiful Nightmare\' on your desired platform.'); return false;">Other</a>
-                </div>
+        <div class="track-card">
+            <div class="placeholder-art">ART HERE</div>
+            <div class="track-info">
+                <h3>BEAUTIFUL NIGHTMARE</h3>
+                <p>2023</p>
+                <a href="#" class="stream-link">PLAY NOW</a>
             </div>
         </div>
-
-    </section>
-
-    <section class="page-header" style="padding-top: 0;">
-        <h1 class="section-title">VISUALS</h1>
     </section>
 
     <section class="visuals-section">
+        <h2 class="section-title">VISUALS</h2>
         <div class="video-grid">
             <div class="video-wrapper">
                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mKqpqi1QaNw?rel=0&modestbranding=1" title="Beautiful Nightmare" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="video-wrapper">
-                <iframe width="100%" height
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ot4hyOswdqA?rel=0&modestbranding=1" title="Doubt It" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <div id="wolf-companion">
+        <svg class="wolf-vector" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,10 80,40 90,80 50,95 10,80 20,40" fill="#111" stroke="#fff" stroke-width="2"/>
+            <circle cx="35" cy="50" r="3" fill="#fff" />
+            <circle cx="65" cy="50" r="3" fill="#fff" />
+        </svg>
+    </div>
+    
+    <div id="wolf-stash" class="hidden">
+        <h3>THE WOLF'S STASH</h3>
+        <ul>
+            <li><a href="#">🎵 Unreleased Snippet</a></li>
+            <li><a href="#">🎬 Behind the Beat</a></li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
