@@ -4,53 +4,50 @@ h1, h2, h3 { font-family: 'Syne', sans-serif; text-transform: uppercase; letter-
 a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
 
 /* Header */
-.site-header { display: flex; justify-content: space-between; align-items: center; padding: 40px 5%; width: 100%; z-index: 10; border-bottom: 1px solid #222; }
+.site-header { display: flex; justify-content: space-between; align-items: center; padding: 40px 5%; width: 100%; position: absolute; top: 0; z-index: 10; }
 .logo h2 { font-size: 1.5rem; letter-spacing: 4px; }
-.main-nav a { margin-left: 30px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+.main-nav a { margin-left: 30px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
 .main-nav a.active, .main-nav a:hover { color: #888; border-bottom: 1px solid #fff; padding-bottom: 5px; }
 
-/* Home Hero */
-.hero-section { height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; }
-.hero-title { font-size: 4rem; font-weight: 800; margin-bottom: 10px; }
-.hero-subtitle { font-size: 1rem; letter-spacing: 3px; margin-bottom: 40px; color: #aaa; }
-.cta-button { border: 1px solid #fff; padding: 15px 40px; font-family: 'Syne', sans-serif; font-weight: 700; letter-spacing: 2px; display: inline-block; }
+/* Hero Section */
+.hero-section { height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; background: #111; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(5,5,5,0.3), rgba(5,5,5,1)); }
+.hero-content { position: relative; z-index: 2; }
+.hero-title { font-size: 6rem; font-weight: 800; margin-bottom: 10px; letter-spacing: 5px; }
+.hero-subtitle { font-size: 1.2rem; letter-spacing: 5px; color: #aaa; }
+
+/* Scrolling Ticker */
+.ticker-wrap { width: 100%; overflow: hidden; background-color: #111; padding: 15px 0; border-top: 1px solid #222; border-bottom: 1px solid #222; }
+.ticker { display: flex; width: 200%; animation: ticker 20s linear infinite; }
+.ticker-item { flex-shrink: 0; width: 33.33%; text-align: center; font-family: 'Syne', sans-serif; font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; }
+@keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
+
+/* Latest Release Spotlight */
+.latest-release { padding: 80px 5%; display: flex; justify-content: center; }
+.release-content { width: 100%; max-width: 800px; text-align: center; }
+.section-title { font-size: 2rem; margin-bottom: 40px; }
+.release-card { display: flex; flex-wrap: wrap; gap: 40px; background: #0a0a0a; border: 1px solid #222; padding: 40px; align-items: center; text-align: left; }
+.release-art { width: 250px; height: 250px; background: #222; display: flex; align-items: center; justify-content: center; color: #555; }
+.release-details h3 { font-size: 2.5rem; margin-bottom: 10px; }
+.release-details p { color: #888; margin-bottom: 25px; }
+.cta-button { border: 1px solid #fff; padding: 15px 40px; font-family: 'Syne', sans-serif; font-weight: 700; letter-spacing: 2px; display: inline-block; background: transparent; cursor: pointer; }
 .cta-button:hover { background: #fff; color: #000; }
 
-/* Page Titles */
-.page-header { padding: 60px 5%; text-align: center; }
-.section-title { font-size: 2.5rem; border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 40px; }
-
-/* Music Grid */
-.music-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 0 5% 60px; }
-.track-card { background: #111; padding: 20px; border-radius: 4px; text-align: center; }
-.placeholder-art { width: 100%; height: 250px; background: #222; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #555; }
-.track-info h3 { font-size: 1.2rem; margin-bottom: 5px; }
-.track-info p { color: #888; margin-bottom: 15px; font-size: 0.9rem; }
-.stream-link { border: 1px solid #555; padding: 8px 20px; font-size: 0.8rem; display: inline-block; }
-.stream-link:hover { background: #fff; color: #000; }
-
-/* Visuals Grid (YouTube Embeds) */
-.visuals-section { padding: 0 5% 60px; }
-.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background-color: #111; border-radius: 4px; }
-.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-/* About Section */
-.about-container { display: flex; flex-wrap: wrap; padding: 60px 5%; gap: 50px; }
-.about-image { flex: 1; min-width: 300px; }
-.placeholder-portrait { width: 100%; height: 500px; background: #222; display: flex; align-items: center; justify-content: center; color: #555; }
-.about-content { flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center; }
-.bio-text { line-height: 1.8; color: #ccc; margin-bottom: 40px; font-size: 1.1rem; }
-.contact-info h3 { font-size: 1rem; color: #888; margin-bottom: 10px; }
-.email-link { font-size: 1.2rem; text-decoration: underline; }
-
 /* Interactive Wolf Companion */
-#wolf-companion { position: fixed; bottom: 40px; right: 40px; width: 60px; height: 60px; cursor: pointer; z-index: 9999; transition: transform 0.2s ease; }
+#wolf-companion { position: fixed; bottom: 40px; right: 40px; width: 70px; height: 70px; cursor: pointer; z-index: 9999; transition: transform 0.2s ease; }
 #wolf-companion:hover { transform: scale(1.1); }
-.wolf-vector { width: 100%; height: 100%; }
-#wolf-stash { position: fixed; bottom: 120px; right: 40px; width: 250px; background-color: #111; border: 1px solid #333; padding: 25px; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 9998; }
-#wolf-stash h3 { font-size: 1rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
-#wolf-stash ul { list-style: none; }
-#wolf-stash li { margin-bottom: 15px; }
-#wolf-stash a { font-size: 0.85rem; }
-#wolf-stash.visible { opacity: 1; pointer-events: auto; }
+.wolf-vector { width: 100%; height: 100%; filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.5)); }
+
+/* Wolf Chat UI */
+#wolf-chat-ui { position: fixed; bottom: 130px; right: 40px; width: 320px; background-color: #0a0a0a; border: 1px solid #333; border-radius: 8px; display: flex; flex-direction: column; opacity: 0; pointer-events: none; transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(10px); z-index: 9998; box-shadow: 0px 10px 30px rgba(0,0,0,0.8); }
+#wolf-chat-ui.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.chat-header { padding: 15px 20px; border-bottom: 1px solid #222; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 1px; background: #111; border-radius: 8px 8px 0 0; }
+.chat-body { padding: 20px; height: 250px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; }
+.chat-msg { padding: 10px 15px; border-radius: 6px; font-size: 0.85rem; line-height: 1.4; max-width: 85%; }
+.wolf-msg { background: #222; align-self: flex-start; color: #eee; border-top-left-radius: 0; }
+.user-msg { background: #fff; color: #000; align-self: flex-end; border-top-right-radius: 0; }
+.chat-footer { padding: 15px; border-top: 1px solid #222; display: flex; gap: 10px; }
+#chat-input { flex: 1; background: #111; border: 1px solid #333; color: #fff; padding: 10px; font-family: 'Inter', sans-serif; font-size: 0.85rem; outline: none; }
+#chat-input:focus { border-color: #666; }
+#chat-send { background: #fff; color: #000; border: none; padding: 0 15px; font-family: 'Syne', sans-serif; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+#chat-send:hover { background: #ccc; }
