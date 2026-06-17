@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhazzy Wolf | Book Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header" style="position: relative; background: #050505;">
+        <div class="logo">
+            <h2>JHAZZY WOLF</h2>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="music.html">Music</a>
+            <a href="about.html">About</a>
+            <a href="press.html">Press</a>
+            <a href="book.html" class="active">Book Me</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1 class="section-title">BOOKING & INQUIRIES</h1>
+    </section>
+
+    <section class="latest-release" style="padding-top: 0;">
+        <div class="release-card" style="width: 100%; max-width: 1000px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: flex-start;">
+            
+            <div>
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px;">SERVICES</h3>
+                <ul style="list-style: none; color: #ccc; line-height: 2;">
+                    <li style="border-bottom: 1px solid #222; padding: 10px 0;"><strong>Live Performances</strong></li>
+                    <li style="border-bottom: 1px solid #222; padding: 10px 0;"><strong>Event Hosting</strong></li>
+                    <li style="border-bottom: 1px solid #222; padding: 10px 0;"><strong>Brand Collaborations</strong></li>
+                    <li style="border-bottom: 1px solid #222; padding: 10px 0;"><strong>Wolf Wednesdays Partnerships</strong></li>
+                </ul>
+            </div>
+
+            <div style="background: #111; padding: 30px; border-radius: 4px;">
+                <form action="mailto:contact@jhazzy.com" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 20px;">
+                    <input type="text" placeholder="Your Name / Company" style="padding: 15px; background: #000; border: 1px solid #333; color: #fff; font-family: 'Inter';" required>
+                    <input type="email" placeholder="Your Email" style="padding: 15px; background: #000; border: 1px solid #333; color: #fff; font-family: 'Inter';" required>
+                    <select style="padding: 15px; background: #000; border: 1px solid #333; color: #fff; font-family: 'Inter';">
+                        <option>Live Performance</option>
+                        <option>Event Hosting</option>
+                        <option>General Inquiry</option>
+                    </select>
+                    <textarea placeholder="Tell me about the event, budget, and dates..." rows="5" style="padding: 15px; background: #000; border: 1px solid #333; color: #fff; font-family: 'Inter';" required></textarea>
+                    <button type="submit" class="cta-button" style="width: 100%;">SEND INQUIRY</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="wolf-companion"><svg class="wolf-vector" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polygon points="50,10 80,40 90,80 50,95 10,80 20,40" fill="#111" stroke="#fff" stroke-width="2"/><circle cx="35" cy="50" r="3" fill="#fff" /><circle cx="65" cy="50" r="3" fill="#fff" /></svg></div>
+    <div id="wolf-chat-ui" class="hidden"><div class="chat-header">JHAZZY'S WOLF</div><div class="chat-body" id="chat-body"></div><div class="chat-footer"><input type="text" id="chat-input"><button id="chat-send">SEND</button></div></div>
+    <script src="app.js"></script>
+</body>
+</html>
