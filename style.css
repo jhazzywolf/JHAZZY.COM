@@ -9,72 +9,95 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
 .main-nav a { margin-left: 30px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
 .main-nav a.active, .main-nav a:hover { color: #888; border-bottom: 1px solid #fff; padding-bottom: 5px; }
 
-/* Hero Section */
-.hero-section { height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; background: #111; }
-.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(5,5,5,0.3), rgba(5,5,5,1)); }
-.hero-content { position: relative; z-index: 2; }
-.hero-title { font-size: 6rem; font-weight: 800; margin-bottom: 10px; letter-spacing: 5px; }
-.hero-subtitle { font-size: 1.2rem; letter-spacing: 5px; color: #aaa; }
-
-/* Scrolling Ticker */
-.ticker-wrap { width: 100%; overflow: hidden; background-color: #111; padding: 15px 0; border-top: 1px solid #222; border-bottom: 1px solid #222; }
-.ticker { display: flex; width: 200%; animation: ticker 20s linear infinite; }
-.ticker-item { flex-shrink: 0; width: 33.33%; text-align: center; font-family: 'Syne', sans-serif; font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; }
-@keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
-
-/* Shared Layouts */
-.latest-release { padding: 80px 5%; display: flex; justify-content: center; }
-.release-content { width: 100%; max-width: 800px; text-align: center; }
-.section-title { font-size: 2rem; margin-bottom: 40px; }
-.release-card { display: flex; flex-wrap: wrap; gap: 40px; background: #0a0a0a; border: 1px solid #222; padding: 40px; align-items: center; text-align: left; }
-.release-art { width: 250px; height: 250px; background: #222; display: flex; align-items: center; justify-content: center; color: #555; }
-.release-details h3 { font-size: 2.5rem; margin-bottom: 10px; }
-.release-details p { color: #888; margin-bottom: 25px; }
-.cta-button { border: 1px solid #fff; padding: 15px 40px; font-family: 'Syne', sans-serif; font-weight: 700; letter-spacing: 2px; display: inline-block; background: transparent; cursor: pointer; text-align: center; }
-.cta-button:hover { background: #fff; color: #000; }
 .page-header { padding: 60px 5%; text-align: center; }
 
 /* =========================================
-   THE NEW SQUARE MUSIC GRID
+   THE BULLETPROOF SQUARE MUSIC GRID
    ========================================= */
 .catalog-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 5% 80px; }
-.category-title { font-size: 1.5rem; margin-bottom: 25px; border-bottom: 1px solid #222; padding-bottom: 10px; }
+.category-title { font-size: 1.5rem; margin-top: 50px; margin-bottom: 25px; border-bottom: 1px solid #222; padding-bottom: 10px; }
 
-.square-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+.square-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 30px; 
+}
 
 .square-card { 
-    aspect-ratio: 1 / 1; 
-    position: relative; 
+    background: #111; 
+    border: 1px solid #222; 
+    border-radius: 8px; 
     overflow: hidden; 
-    border-radius: 4px; 
-    border: 1px solid #222;
-    background: #111;
+    display: flex; 
+    flex-direction: column; 
 }
 
-.square-art-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #444;
-    font-family: 'Syne', sans-serif;
-    letter-spacing: 2px;
+/* This guarantees a perfect grey square for the art */
+.placeholder-box { 
+    width: 100%; 
+    aspect-ratio: 1 / 1; 
+    background: #222; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #666; 
+    font-family: 'Syne', sans-serif; 
+    letter-spacing: 2px; 
+    font-size: 0.9rem;
 }
 
-.square-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 20px 20px;
-    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 60%, transparent 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.card-info { 
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
 }
 
-.track-meta h3 { font-size: 1.3rem; margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
-.track-meta p { color: #aaa; margin-bottom: 15px; font-size: 0.85rem; }
+.card-info h3 { font-size: 1.2rem; margin-bottom: 2px; }
+.card-info p { color: #888; font-size: 0.9rem; margin-bottom: 10px; }
 
-/*
+.platform-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.platform-btn { 
+    padding: 6px 14px; 
+    border: 1px solid #444; 
+    border-radius: 30px; 
+    font-size: 0.7rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    transition: all 0.3s ease; 
+}
+.platform-btn:hover { background: #fff; color: #000; border-color: #fff; }
+
+/* Visuals Grid */
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background-color: #111; border-radius: 8px; border: 1px solid #222; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* =========================================
+   THE PET WOLF (PERFECTLY HIDDEN)
+   ========================================= */
+#pet-wolf-container { position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; }
+#wolf-companion { width: 60px; height: 60px; cursor: pointer; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.6)); }
+#wolf-companion:hover { transform: scale(1.1); }
+.wolf-vector { width: 100%; height: 100%; }
+
+#wolf-speech-bubble { 
+    background: #111; border: 1px solid #333; color: #fff; padding: 20px; border-radius: 12px 12px 0 12px; width: 300px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.8); transform-origin: bottom right; 
+    opacity: 0; visibility: hidden; transform: translateY(20px) scale(0.95); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+#wolf-speech-bubble.visible { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+#wolf-dialogue { font-size: 0.95rem; line-height: 1.4; margin-bottom: 15px; font-weight: 500; }
+
+.wolf-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+.action-chip { background: #222; color: #fff; border: 1px solid #444; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-family: 'Syne', sans-serif; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+.action-chip:hover { background: #fff; color: #000; border-color: #fff; }
+
+.wolf-input-area { display: flex; border-top: 1px solid #333; padding-top: 15px; }
+#wolf-talk-input { flex: 1; background: transparent; border: none; outline: none; font-family: 'Inter', sans-serif; font-size: 0.85rem; color: #fff; padding: 5px; }
+#wolf-talk-send { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #888; transition: color 0.2s; }
+#wolf-talk-send:hover { color: #fff; }
+
+.wolf-jump { animation: jump 0.5s ease; }
+.wolf-spin { animation: spin 0.6s ease; }
+@keyframes jump { 0% { transform: translateY(0); } 50% { transform: translateY(-30px); } 100% { transform: translateY(0); } }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
