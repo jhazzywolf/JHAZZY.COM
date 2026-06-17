@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jhazzy Wolf | Official Music</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -56,19 +56,23 @@
     </section>
 
     <div id="pet-wolf-container">
-        <div id="wolf-speech-bubble" class="hidden">
+        
+        <div id="wolf-speech-bubble">
             <div class="bubble-tail"></div>
             <p id="wolf-dialogue">What's good? Give me a command or ask me a question.</p>
+            
             <div class="wolf-actions">
                 <button class="action-chip" data-action="music">🎵 Play Music</button>
                 <button class="action-chip" data-action="trick">🐺 Do a Trick</button>
                 <button class="action-chip" data-action="about">🔥 Who is Jhazzy?</button>
             </div>
+            
             <div class="wolf-input-area">
                 <input type="text" id="wolf-talk-input" placeholder="Talk to the wolf...">
                 <button id="wolf-talk-send">❯</button>
             </div>
         </div>
+
         <div id="wolf-companion">
             <svg class="wolf-vector" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <polygon points="50,10 80,40 90,80 50,95 10,80 20,40" fill="#111" stroke="#fff" stroke-width="2"/>
