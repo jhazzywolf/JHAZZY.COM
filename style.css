@@ -34,98 +34,47 @@ a { color: #ffffff; text-decoration: none; transition: color 0.3s ease; }
 .cta-button:hover { background: #fff; color: #000; }
 .page-header { padding: 60px 5%; text-align: center; }
 
-/* Music Grid */
-.music-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 5% 60px; max-width: 1200px; margin: 0 auto; }
-.track-card { background: #111; padding: 25px; border-radius: 8px; text-align: center; border: 1px solid #222; }
-.placeholder-art { width: 100%; height: 280px; background: #222; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #555; }
-.track-info h3 { font-size: 1.4rem; margin-bottom: 5px; }
-.track-info p { color: #888; margin-bottom: 20px; font-size: 0.9rem; }
-.platform-links { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
-.platform-btn { padding: 8px 16px; border: 1px solid #444; border-radius: 30px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; }
-.platform-btn:hover { background: #fff; color: #000; border-color: #fff; }
-
-/* Visuals Grid */
-.visuals-section { padding: 0 5% 60px; max-width: 1200px; margin: 0 auto; }
-.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background-color: #111; border-radius: 4px; }
-.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-/* About / Book Section */
-.about-container { display: flex; flex-wrap: wrap; padding: 60px 5%; gap: 50px; max-width: 1200px; margin: 0 auto; }
-.about-image { flex: 1; min-width: 300px; }
-.placeholder-portrait { width: 100%; height: 500px; background: #222; display: flex; align-items: center; justify-content: center; color: #555; }
-.about-content { flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center; }
-.bio-text { line-height: 1.8; color: #ccc; margin-bottom: 40px; font-size: 1.1rem; }
-.contact-info h3 { font-size: 1rem; color: #888; margin-bottom: 10px; }
-.email-link { font-size: 1.2rem; text-decoration: underline; }
-
 /* =========================================
-   THE PET WOLF (PERFECTLY HIDDEN & SMOOTH)
+   THE NEW SQUARE MUSIC GRID
    ========================================= */
+.catalog-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 5% 80px; }
+.category-title { font-size: 1.5rem; margin-bottom: 25px; border-bottom: 1px solid #222; padding-bottom: 10px; }
 
-/* The Container */
-#pet-wolf-container { 
-    position: fixed; 
-    bottom: 30px; 
-    right: 30px; 
-    z-index: 9999; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-end; 
+.square-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+
+.square-card { 
+    aspect-ratio: 1 / 1; 
+    position: relative; 
+    overflow: hidden; 
+    border-radius: 4px; 
+    border: 1px solid #222;
+    background: #111;
 }
 
-/* The Wolf Graphic */
-#wolf-companion { 
-    width: 60px; 
-    height: 60px; 
-    cursor: pointer; 
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-    filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.6)); 
-}
-#wolf-companion:hover { transform: scale(1.1); }
-.wolf-vector { width: 100%; height: 100%; }
-
-/* The Speech Bubble - STRICTLY HIDDEN UNTIL CLICKED */
-#wolf-speech-bubble { 
-    background: #111; 
-    border: 1px solid #333; 
-    color: #fff; 
-    padding: 20px; 
-    border-radius: 12px 12px 0 12px; 
-    width: 300px; 
-    margin-bottom: 15px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8); 
-    transform-origin: bottom right; 
-    
-    /* These 3 lines force it to be invisible and untouchable */
-    opacity: 0; 
-    visibility: hidden; 
-    transform: translateY(20px) scale(0.95); 
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+.square-art-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-family: 'Syne', sans-serif;
+    letter-spacing: 2px;
 }
 
-/* Added by JS when clicked */
-#wolf-speech-bubble.visible { 
-    opacity: 1; 
-    visibility: visible; 
-    transform: translateY(0) scale(1); 
+.square-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-#wolf-dialogue { font-size: 0.95rem; line-height: 1.4; margin-bottom: 15px; font-weight: 500; }
+.track-meta h3 { font-size: 1.3rem; margin-bottom: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+.track-meta p { color: #aaa; margin-bottom: 15px; font-size: 0.85rem; }
 
-/* Game-Style Action Chips */
-.wolf-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
-.action-chip { background: #222; color: #fff; border: 1px solid #444; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-family: 'Syne', sans-serif; font-weight: 700; cursor: pointer; transition: all 0.2s; }
-.action-chip:hover { background: #fff; color: #000; border-color: #fff; }
-
-/* The Input Area */
-.wolf-input-area { display: flex; border-top: 1px solid #333; padding-top: 15px; }
-#wolf-talk-input { flex: 1; background: transparent; border: none; outline: none; font-family: 'Inter', sans-serif; font-size: 0.85rem; color: #fff; padding: 5px; }
-#wolf-talk-send { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #888; transition: color 0.2s; }
-#wolf-talk-send:hover { color: #fff; }
-
-/* Animations */
-.wolf-jump { animation: jump 0.5s ease; }
-.wolf-spin { animation: spin 0.6s ease; }
-@keyframes jump { 0% { transform: translateY(0); } 50% { transform: translateY(-30px); } 100% { transform: translateY(0); } }
-@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+/*
