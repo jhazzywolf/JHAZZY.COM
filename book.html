@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jhazzy Wolf | Book Me</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -26,39 +26,41 @@
         <h1 class="section-title">BOOKING & INQUIRIES</h1>
     </section>
 
-    <section class="about-container" style="padding-top: 0;">
-        <div class="about-content">
-            <h3 style="font-size: 1.8rem; margin-bottom: 20px;">SERVICES</h3>
-            <ul style="list-style: none; color: #ccc; line-height: 2;">
-                <li style="border-bottom: 1px solid #222; padding: 10px 0;"><strong>Live Performances</strong></li>
-                <li style="border-bottom: 1px solid #222; padding: 10px 0;"><strong>Event Hosting</strong></li>
-                <li style="border-bottom: 1px solid #222; padding: 10px 0;"><strong>Brand Collaborations</strong></li>
-                <li style="border-bottom: 1px solid #222; padding: 10px 0;"><strong>Wolf Wednesdays Partnerships</strong></li>
+    <main class="text-page-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+        
+        <div class="text-content-box" style="background: transparent; border: none; padding: 0;">
+            <h3 style="margin-bottom: 20px;">SERVICES</h3>
+            <ul style="list-style: none; line-height: 2.5; color: #ccc;">
+                <li style="border-bottom: 1px solid #222;"><strong>Live Performances</strong></li>
+                <li style="border-bottom: 1px solid #222;"><strong>Event Hosting</strong></li>
+                <li style="border-bottom: 1px solid #222;"><strong>Brand Collaborations</strong></li>
+                <li style="border-bottom: 1px solid #222;"><strong>Wolf Wednesdays Partnerships</strong></li>
             </ul>
         </div>
-        <div class="about-content" style="background: #111; padding: 30px; border-radius: 4px;">
-            <form action="mailto:contact@jhazzy.com" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 20px;">
-                <input type="text" placeholder="Your Name / Company" style="padding: 15px; background: #000; border: 1px solid #333; color: #fff; font-family: 'Inter';" required>
-                <input type="email" placeholder="Your Email" style="padding: 15px; background: #000; border: 1px solid #333; color: #fff; font-family: 'Inter';" required>
+
+        <div class="text-content-box">
+            <form action="mailto:contact@jhazzy.com" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="text" placeholder="Name / Company" style="padding: 15px; background: #000; border: 1px solid #333; color: #fff; font-family: 'Inter';" required>
+                <input type="email" placeholder="Email" style="padding: 15px; background: #000; border: 1px solid #333; color: #fff; font-family: 'Inter';" required>
                 <select style="padding: 15px; background: #000; border: 1px solid #333; color: #fff; font-family: 'Inter';">
                     <option>Live Performance</option>
                     <option>Event Hosting</option>
                     <option>General Inquiry</option>
                 </select>
-                <textarea placeholder="Tell me about the event, budget, and dates..." rows="5" style="padding: 15px; background: #000; border: 1px solid #333; color: #fff; font-family: 'Inter';" required></textarea>
-                <button type="submit" class="cta-button" style="width: 100%;">SEND INQUIRY</button>
+                <textarea placeholder="Event details, budget, dates..." rows="4" style="padding: 15px; background: #000; border: 1px solid #333; color: #fff; font-family: 'Inter';" required></textarea>
+                <button type="submit" class="action-chip" style="width: 100%; padding: 15px; font-size: 1rem;">SEND INQUIRY</button>
             </form>
         </div>
-    </section>
+
+    </main>
 
     <div id="pet-wolf-container">
-        <div id="wolf-speech-bubble" class="hidden">
+        <div id="wolf-speech-bubble">
             <div class="bubble-tail"></div>
             <p id="wolf-dialogue">What's good? Give me a command or ask me a question.</p>
             <div class="wolf-actions">
                 <button class="action-chip" data-action="music">🎵 Play Music</button>
                 <button class="action-chip" data-action="trick">🐺 Do a Trick</button>
-                <button class="action-chip" data-action="about">🔥 Who is Jhazzy?</button>
             </div>
             <div class="wolf-input-area">
                 <input type="text" id="wolf-talk-input" placeholder="Talk to the wolf...">
