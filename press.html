@@ -27,21 +27,41 @@
     </section>
 
     <section class="music-grid">
-        <div class="release-card" style="flex-direction: column; align-items: flex-start; gap: 20px;">
-            <h3 style="font-size: 1.5rem; color: #fff;">WESTWORD</h3>
-            <p style="font-style: italic; color: #aaa;">"But artists like Wolf are determined to create community and elevate Denver's hip-hop scene to national acclaim."</p>
+        <div class="track-card" style="text-align: left;">
+            <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 15px;">WESTWORD</h3>
+            <p style="font-style: italic; color: #aaa; margin-bottom: 20px;">"But artists like Wolf are determined to create community and elevate Denver's hip-hop scene to national acclaim."</p>
             <a href="#" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">READ ARTICLE</a>
         </div>
-
-        <div class="release-card" style="flex-direction: column; align-items: flex-start; gap: 20px;">
-            <h3 style="font-size: 1.5rem; color: #fff;">DENVERITE</h3>
-            <p style="font-style: italic; color: #aaa;">"For Wolf, it's a win-win situation for partners and artists alike to see their music community flourish in this capacity."</p>
+        <div class="track-card" style="text-align: left;">
+            <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 15px;">DENVERITE</h3>
+            <p style="font-style: italic; color: #aaa; margin-bottom: 20px;">"For Wolf, it's a win-win situation for partners and artists alike to see their music community flourish in this capacity."</p>
             <a href="#" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">READ ARTICLE</a>
         </div>
     </section>
 
-    <div id="wolf-companion"><svg class="wolf-vector" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polygon points="50,10 80,40 90,80 50,95 10,80 20,40" fill="#111" stroke="#fff" stroke-width="2"/><circle cx="35" cy="50" r="3" fill="#fff" /><circle cx="65" cy="50" r="3" fill="#fff" /></svg></div>
-    <div id="wolf-chat-ui" class="hidden"><div class="chat-header">JHAZZY'S WOLF</div><div class="chat-body" id="chat-body"></div><div class="chat-footer"><input type="text" id="chat-input"><button id="chat-send">SEND</button></div></div>
+    <div id="pet-wolf-container">
+        <div id="wolf-speech-bubble" class="hidden">
+            <div class="bubble-tail"></div>
+            <p id="wolf-dialogue">What's good? Give me a command or ask me a question.</p>
+            <div class="wolf-actions">
+                <button class="action-chip" data-action="music">🎵 Play Music</button>
+                <button class="action-chip" data-action="trick">🐺 Do a Trick</button>
+                <button class="action-chip" data-action="about">🔥 Who is Jhazzy?</button>
+            </div>
+            <div class="wolf-input-area">
+                <input type="text" id="wolf-talk-input" placeholder="Talk to the wolf...">
+                <button id="wolf-talk-send">❯</button>
+            </div>
+        </div>
+        <div id="wolf-companion">
+            <svg class="wolf-vector" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,10 80,40 90,80 50,95 10,80 20,40" fill="#111" stroke="#fff" stroke-width="2"/>
+                <circle cx="35" cy="50" r="3" fill="#fff" />
+                <circle cx="65" cy="50" r="3" fill="#fff" />
+            </svg>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
