@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhazzy Wolf | Music Catalog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <h2>JHAZZY WOLF</h2>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="music.html" class="active">Music</a>
+            <a href="mailto:contact@jhazzy.com">Contact</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1 class="section-title">THE CATALOG</h1>
+    </section>
+
+    <section class="music-grid">
+        <div class="track-card">
+            <img src="placeholder-naughty-cover.jpg" alt="Naughty Cover Art" class="track-image">
+            <div class="track-info">
+                <h3>NAUGHTY</h3>
+                <p>2023</p>
+                <a href="#" class="stream-link">PLAY NOW</a>
+            </div>
+        </div>
+
+        <div class="track-card">
+            <img src="placeholder-beautiful-nightmare.jpg" alt="Beautiful Nightmare Cover Art" class="track-image">
+            <div class="track-info">
+                <h3>BEAUTIFUL NIGHTMARE</h3>
+                <p>2023</p>
+                <a href="#" class="stream-link">PLAY NOW</a>
+            </div>
+        </div>
+        
+        </section>
+
+    <section class="visuals-section">
+        <h2 class="section-title">VISUALS</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <img src="placeholder-video-thumbnail-1.jpg" alt="Video Thumbnail">
+                <button class="play-video-btn">WATCH</button>
+                <p>Doubt It - Mic Drop</p>
+            </div>
+            
+            <div class="video-card">
+                <img src="placeholder-studio-recap.jpg" alt="Studio Session Thumbnail">
+                <button class="play-video-btn">WATCH</button>
+                <p>Studio Session Recap</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <h2 class="section-title">FEATURES</h2>
+        <ul class="features-list">
+            <li>
+                <span class="track-name">STACC IT UP</span> - <span class="artist-name">K$TACC$ ft. Jhazzy Wolf</span>
+                <a href="#" class="stream-link-small">Listen</a>
+            </li>
+            <li>
+                <span class="track-name">MY CITY</span> - <span class="artist-name">DNA PICASSO ft. Jhazzy Wolf</span>
+                <a href="#" class="stream-link-small">Listen</a>
+            </li>
+        </ul>
+    </section>
+
+    <div id="wolf-companion">
+        <svg class="wolf-vector" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,10 80,40 90,80 50,95 10,80 20,40" fill="#111" stroke="#fff" stroke-width="2"/>
+            <circle cx="35" cy="50" r="3" fill="#fff" />
+            <circle cx="65" cy="50" r="3" fill="#fff" />
+        </svg>
+    </div>
+
+    <div id="wolf-stash" class="hidden">
+        <h3>THE WOLF'S STASH</h3>
+        <ul>
+            <li><a href="#">🎵 Unreleased Snippet</a></li>
+            <li><a href="#">🎬 Behind the Beat</a></li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
