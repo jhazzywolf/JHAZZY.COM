@@ -16,15 +16,15 @@ body { background: #050505; color: #fff; font-family: 'Inter', sans-serif; overf
 .video-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
 .video-background iframe { width: 100vw; height: 56.25vw; min-height: 100%; min-width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
 
+/* --- HERO CONTENT --- */
 .hero-content { position: relative; z-index: 2; text-align: center; margin-top: -50px; }
 .hero-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 5rem; letter-spacing: 10px; text-transform: uppercase; }
 
-/* --- BOTTOM NAV (LOCKED BOTTOM) --- */
+/* --- BOTTOM NAV (RESTORED SOLID BAR) --- */
 .bottom-nav { position: absolute; bottom: 0; left: 0; width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); z-index: 10; }
-.nav-btn { background: rgba(0, 0, 0, 0.9); border: 1px solid #222; border-bottom: none; padding: 30px; text-align: center; color: #fff; text-decoration: none; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 2px; transition: 0.3s; }
-.nav-btn span { font-family: 'Inter', sans-serif; font-size: 0.6rem; color: #888; display: block; margin-top: 5px; font-weight: 400; letter-spacing: 1px; }
+.nav-btn { background: rgba(0, 0, 0, 0.9); border: 1px solid #222; border-bottom: none; border-left: none; padding: 40px; text-align: center; color: #fff; text-decoration: none; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: 2px; transition: 0.3s; }
+.nav-btn:first-child { border-left: 1px solid #222; }
 .nav-btn:hover { background: #fff; color: #000; }
-.nav-btn:hover span { color: #000; }
 
 /* --- MUSIC PAGE GRID --- */
 .catalog-wrapper { max-width: 1200px; margin: 0 auto; padding: 150px 5% 50px; }
@@ -41,12 +41,16 @@ body { background: #050505; color: #fff; font-family: 'Inter', sans-serif; overf
 .platform-btn:hover { background: #fff; color: #000; }
 
 /* --- TEXT & INFO PAGES (ABOUT, PRESS, BOOK ME) --- */
-.page-wrapper { max-width: 1000px; margin: 0 auto; padding: 150px 5% 50px; }
-.content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.page-wrapper { max-width: 1100px; margin: 0 auto; padding: 180px 5% 100px; }
+.page-title { text-align: center; margin-bottom: 50px; }
+.page-title h1 { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; letter-spacing: 5px; text-transform: uppercase; border-bottom: 1px solid #222; padding-bottom: 20px; display: inline-block; }
 
-.content-box { background: #111; border: 1px solid #222; padding: 40px; margin-bottom: 30px; }
-.content-box h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px solid #222; padding-bottom: 10px; letter-spacing: 2px; text-transform: uppercase; }
-.content-box h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; margin-bottom: 10px; color: #fff; }
-.content-box p { color: #ccc; line-height: 1.8; font-size: 0.9rem; margin-bottom: 15px; }
-.content-box .stream-cta { display: inline-block; margin-top: 10px; padding: 12px 30px; border: 1px solid #fff; color: #fff; font-family: 'Syne', sans-serif; font-weight: 700; text-decoration: none; letter-spacing: 2px; transition: 0.3s; }
-.content-box .stream-cta:hover { background: #fff; color: #000; }
+.content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+
+.content-box { background: #0a0a0a; border: 1px solid #1a1a1a; padding: 50px; transition: 0.3s ease; }
+.content-box:hover { border-color: #444; }
+.content-box h3 { font-family: 'Syne', sans-serif; font-size: 1.5rem; margin-bottom: 15px; color: #fff; font-weight: 800; letter-spacing: 2px; }
+.content-box p { color: #888; line-height: 1.8; font-size: 0.95rem; margin-bottom: 25px; font-weight: 300; }
+
+.content-box .platform-btn { border-color: #444; color: #aaa; padding: 8px 16px; letter-spacing: 1px; }
+.content-box .platform-btn:hover { background: #fff; color: #000; border-color: #fff; }
