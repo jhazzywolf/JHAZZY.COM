@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhazzy Wolf</title>
+    <title>Jhazzy Wolf | Official Site</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,21 +22,35 @@
 
     <main class="hero-section">
         <div class="video-background">
-            <iframe src="https://player.vimeo.com/video/1120658702?background=1&autoplay=1&loop=1&muted=1&playsinline=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/1120658702?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
-        
         <div class="hero-content">
             <h1 class="hero-title">JHAZZY WOLF</h1>
             <a href="music.html" class="stream-cta">STREAM CATALOG</a>
         </div>
-
-        <section class="bottom-nav">
-            <a href="music.html" class="nav-btn">MUSIC</a>
-            <a href="about.html" class="nav-btn">ABOUT</a>
-            <a href="press.html" class="nav-btn">PRESS</a>
-            <a href="book.html" class="nav-btn">BOOK ME</a>
-        </section>
     </main>
 
+    <section class="main-overlap">
+        <div class="home-nav-tabs">
+            <a href="music.html" class="nav-tab"><h3>MUSIC</h3><p>Catalog</p></a>
+            <a href="about.html" class="nav-tab"><h3>ABOUT</h3><p>Story</p></a>
+            <a href="press.html" class="nav-tab"><h3>PRESS</h3><p>Media</p></a>
+            <a href="book.html" class="nav-tab"><h3>BOOK ME</h3><p>Inquiries</p></a>
+        </div>
+    </section>
+
+    <div id="pet-wolf-container">
+        <div id="wolf-speech-bubble">
+            <div class="wolf-actions">
+                <button class="action-chip" data-action="music">🎵 Play Music</button>
+                <button class="action-chip" data-action="trick">🐺 Do a Trick</button>
+            </div>
+        </div>
+        <div id="wolf-companion">
+            <svg class="wolf-vector" viewBox="0 0 100 100"><polygon points="50,10 80,40 90,80 50,95 10,80 20,40" fill="#111" stroke="#fff" stroke-width="2"/></svg>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
