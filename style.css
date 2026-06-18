@@ -1,29 +1,40 @@
+/* --- GLOBAL RESET & PREMIUM TYPOGRAPHY --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@600;700;800&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { background: #050505; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
 
-/* --- HEADER --- */
-.site-header { position: absolute; top: 0; width: 100%; display: flex; justify-content: space-between; padding: 30px 5%; z-index: 100; }
+/* --- HEADER (LOCKED TOP) --- */
+.site-header { position: absolute; top: 0; left: 0; width: 100%; display: flex; justify-content: space-between; padding: 30px 5%; z-index: 100; }
 .logo h2 { font-family: 'Syne', sans-serif; font-weight: 800; letter-spacing: 4px; font-size: 1.5rem; }
 .main-nav a { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.8rem; margin-left: 20px; color: #fff; text-decoration: none; }
 
-/* --- HOME LAYOUT (LOCKED) --- */
-.hero-section { height: 100vh; display: flex; flex-direction: column; align-items: center; position: relative; }
-.video-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; }
+/* --- HOME LAYOUT (LOCKED SCREEN) --- */
+.hero-section { height: 100vh; width: 100vw; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.video-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
 .video-background iframe { width: 100vw; height: 56.25vw; min-height: 100%; min-width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
-.hero-content { position: relative; z-index: 2; flex-grow: 1; display: flex; align-items: center; justify-content: center; }
+
+.hero-content { position: relative; z-index: 2; text-align: center; margin-top: -50px; }
 .hero-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 5rem; letter-spacing: 10px; text-transform: uppercase; }
 
-/* --- BOTTOM NAV --- */
-.bottom-nav { width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); z-index: 10; }
-.nav-btn { background: rgba(0, 0, 0, 0.9); border: 1px solid #222; padding: 30px; text-align: center; color: #fff; text-decoration: none; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 2px; }
-.nav-btn span { font-size: 0.6rem; color: #888; display: block; margin-top: 5px; font-weight: 300; }
+/* --- BOTTOM NAV (LOCKED BOTTOM) --- */
+.bottom-nav { position: absolute; bottom: 0; left: 0; width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); z-index: 10; }
+.nav-btn { background: rgba(0, 0, 0, 0.9); border: 1px solid #222; border-bottom: none; padding: 30px; text-align: center; color: #fff; text-decoration: none; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 2px; transition: 0.3s; }
+.nav-btn span { font-family: 'Inter', sans-serif; font-size: 0.6rem; color: #888; display: block; margin-top: 5px; font-weight: 400; letter-spacing: 1px; }
 .nav-btn:hover { background: #fff; color: #000; }
 .nav-btn:hover span { color: #000; }
 
-/* --- MUSIC PAGE GRID --- */
-.page-container { width: 100%; min-height: 100vh; padding: 150px 5% 50px; }
-.catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.card { border: 1px solid #222; background: #111; padding: 20px; aspect-ratio: 1/1; }
+/* --- MUSIC PAGE GRID (RESTORED) --- */
+.catalog-wrapper { max-width: 1200px; margin: 0 auto; padding: 150px 5% 50px; }
+.category-title { font-size: 1.5rem; margin-bottom: 25px; border-bottom: 1px solid #222; padding-bottom: 10px; font-family: 'Syne', sans-serif; font-weight: 800; letter-spacing: 2px; }
+
+.square-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px; }
+.square-card { aspect-ratio: 1 / 1; position: relative; border: 1px solid #222; background: #111; display: flex; align-items: center; justify-content: center; color: #444; font-size: 0.8rem; letter-spacing: 1px; }
+
+.square-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); }
+.square-overlay h3 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; margin-bottom: 5px; }
+.square-overlay p { font-size: 0.8rem; color: #ccc; margin-bottom: 10px; }
+
+.platform-btn { display: inline-block; padding: 5px 12px; border: 1px solid #666; font-size: 0.7rem; text-transform: uppercase; margin-right: 5px; color: #fff; text-decoration: none; transition: 0.3s; }
+.platform-btn:hover { background: #fff; color: #000; }
