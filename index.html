@@ -10,9 +10,7 @@
 <body>
 
     <header class="site-header">
-        <div class="logo">
-            <h2>JHAZZY WOLF</h2>
-        </div>
+        <div class="logo"><h2>JHAZZY WOLF</h2></div>
         <nav class="main-nav">
             <a href="index.html" class="active">HOME</a>
             <a href="music.html">MUSIC</a>
@@ -23,6 +21,9 @@
     </header>
 
     <main class="hero-section">
+        <div class="video-background">
+            <iframe src="https://player.vimeo.com/video/1120658702?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">JHAZZY WOLF</h1>
@@ -41,14 +42,10 @@
     <div id="pet-wolf-container">
         <div id="wolf-speech-bubble">
             <div class="bubble-tail"></div>
-            <p id="wolf-dialogue">What's good? Ask me about my music or upcoming shows.</p>
+            <p id="wolf-dialogue">What's good? I can help you find music or booking info.</p>
             <div class="wolf-actions">
                 <button class="action-chip" data-action="music">🎵 Play Music</button>
                 <button class="action-chip" data-action="trick">🐺 Do a Trick</button>
-            </div>
-            <div class="wolf-input-area">
-                <input type="text" id="wolf-talk-input" placeholder="Talk to the wolf...">
-                <button id="wolf-talk-send">❯</button>
             </div>
         </div>
         <div id="wolf-companion">
